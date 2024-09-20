@@ -784,10 +784,9 @@ p {
 
 /* ===== About CSS ===== */
 .ud-about {
-  background: #f3f4fe;
   background: linear-gradient(to right, #74ebd5, #acb6e5);
-
   padding: 120px 0;
+  text-align: left; /* Left-align the text content */
 }
 
 @media (max-width: 767px) {
@@ -797,40 +796,21 @@ p {
 }
 
 .ud-about-wrapper {
-  background: var(--white);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left; /* Left-align the text */
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   .ud-about-wrapper {
-    display: block;
+    flex-direction: column; /* Stack the content on smaller screens */
   }
 }
 
 .ud-about-content-wrapper {
-  padding: 70px;
-}
-
-@media (max-width: 767px) {
-  .ud-about-content-wrapper {
-    padding: 50px 30px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .ud-about-content-wrapper {
-    padding: 50px;
-  }
-}
-
-.ud-about-content {
-  max-width: 500px;
+  padding: 0; /* Remove unnecessary padding */
+  max-width: 600px; /* Align content width similar to services */
 }
 
 .ud-about-content .tag {
@@ -865,15 +845,20 @@ p {
 
 .ud-about-content .ud-main-btn:hover {
   background: #2748b4;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+.ud-about-image {
+  max-width: 500px; /* Adjust the image size similar to services */
+}
+
+@media only screen and (max-width: 991px) {
   .ud-about-image {
-    text-align: center;
+    margin-top: 30px; /* Add some spacing between content and image */
+    text-align: center; /* Center the image on smaller screens */
   }
 }
+
 
 /* ===== Pricing CSS ===== */
 .ud-pricing {
